@@ -344,8 +344,14 @@ function myFunction2() {
     var person = prompt("Please enter your name", "Harry Potter");
     if (person != null) {
         document.getElementById("demo").innerHTML =
-       alert ("Hello " + person + "! Welcome to Programmer Humor!");
+       alert ("Hello " + person + "!/nWelcome to Programmer Humor!");
     }
+}
+    function mf3() {
+     alert ('You Clicked Me!')   
+    }
+  function mf4() {
+    alert(Math.PI);
 }
     myFunction
 </script>
@@ -392,7 +398,7 @@ function clickMeEvent(obj) {
 </div> 
                     <div id="pjokes1">
                     <div class="banner3">
-          <h2>Part 2</h2>
+          <h2 onclick=mf3>Part 2</h2>
           <ul>
             <li>Definition, Programmer: An organism that turns caffeine and pizza into software.</li>
             <li>Definition, Algorithm: Word used by programmers when they do not want to explain what they did.</li>
@@ -408,7 +414,7 @@ function clickMeEvent(obj) {
         </div>
  <div class="banner4">
   <div id="pjokes2">
-       <h2>Part 3</h2>
+       <h2 onclick=mf4>Part 3</h2>
       <ul> 
       <li>Q: What's the Object Oriented way to become wealthy</li> 
       <li>A: Inheritance</li> 
