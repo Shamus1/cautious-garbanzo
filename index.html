@@ -49,14 +49,7 @@ function checkCookie() {
    <title>Programmer Humor - Natalie F.</title>
   
   
-  
-  
-      <style onload="checkCookie()">
-      @font-face {
-  font-family: "Glegoo";
-  src: url(../fonts/Glegoo-Regular.ttf) format("truetype");
-}
-
+ 
 @font-face {
   font-family: "Space Mono";
   font-style: normal;
@@ -219,7 +212,32 @@ a.home {
   margin-top: 77px;
   text-align: center;
 }
+.blink_text {
 
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
 .editorial {
   padding: 20px;
   margin: 20px 0;
@@ -355,7 +373,7 @@ function myFunction() {
      <div id="pjokes0">
        <div class="banner2">
          <h2>Part 1</h2>
-    <h3>CIA: Computer Industry Acronyms</h3>
+           <span class="blink_text">CIA: Computer Industry Acronym</span>
       <ul>
         <li>CD-ROM: Consumer Device, Rendered Obsolete in Months</li>
         <li>PCMCIA: People Can’t Memorize Computer Industry Acronyms</li>
