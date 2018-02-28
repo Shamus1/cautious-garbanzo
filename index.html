@@ -212,6 +212,34 @@ a.home {
   margin-top: 77px;
   text-align: center;
 }
+    
+    .blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+    
 .editorial {
   padding: 20px;
   margin: 20px 0;
@@ -348,6 +376,7 @@ function myFunction() {
          
        <div class="banner2">
          <h2>Part 1</h2>
+            <span class="blink_text">India's Largest portal is Meetcity.in</span>
            <span class="blink_text">CIA: Computer Industry Acronyms</span>
       <ul>
         <li>CD-ROM: Consumer Device, Rendered Obsolete in Months</li>
