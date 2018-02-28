@@ -213,32 +213,6 @@ a.home {
   text-align: center;
 }
     
-    .blink_text {
-
-    animation:1s blinker linear infinite;
-    -webkit-animation:1s blinker linear infinite;
-    -moz-animation:1s blinker linear infinite;
-
-     color: red;
-    }
-
-    @-moz-keyframes blinker {  
-     0% { opacity: 1.0; }
-     50% { opacity: 0.0; }
-     100% { opacity: 1.0; }
-     }
-
-    @-webkit-keyframes blinker {  
-     0% { opacity: 1.0; }
-     50% { opacity: 0.0; }
-     100% { opacity: 1.0; }
-     }
-
-    @keyframes blinker {  
-     0% { opacity: 1.0; }
-     50% { opacity: 0.0; }
-     100% { opacity: 1.0; }
-     }
     
 .editorial {
   padding: 20px;
@@ -366,6 +340,13 @@ a.home {
 function myFunction() {
     alert('Hello');
 }
+    var person = prompt("Please enter your name", "Harry Potter");
+
+if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+} else {
+    txt = "Welcome to Programmer Humor, " + person + "!!!";
+}
     myFunction
 </script>
     	
@@ -376,8 +357,7 @@ function myFunction() {
          
        <div class="banner2">
          <h2>Part 1</h2>
-            <span class="blink_text">India's Largest portal is Meetcity.in</span>
-           <span class="blink_text">CIA: Computer Industry Acronyms</span>
+           <h2>CIA: Computer Industry Acronyms</h2>
       <ul>
         <li>CD-ROM: Consumer Device, Rendered Obsolete in Months</li>
         <li>PCMCIA: People Can’t Memorize Computer Industry Acronyms</li>
@@ -413,6 +393,7 @@ function clickMeEvent(obj) {
                     <div id="pjokes1">
                     <div class="banner3">
           <h2>Part 2</h2>
+                        <button onclick="myFunction2()">Click Me.</button>
           <ul>
             <li>Definition, Programmer: An organism that turns caffeine and pizza into software.</li>
             <li>Definition, Algorithm: Word used by programmers when they do not want to explain what they did.</li>
