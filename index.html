@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+</script> onload="checkCookie()"
+
+
+  <meta charset="UTF-8">
+   <title>Not-Simple HTML/CSS Website</title>
+  
+  
+  
+  
+      <style>
+      @font-face {
+  font-family: "Glegoo";
+  src: url(../fonts/Glegoo-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Space Mono"), local("SpaceMono-Regular"),
+    url(https://fonts.gstatic.com/s/spacemono/v1/adVweg3BJhE6r8jYmXseHQzyDMXhdD8sAj6OAJTFsBI.woff2)
+      format("woff2");
+  unicode-range: U+0000-00ff, U+0131, U+0152-0153, U+02c6, U+02da, U+02dc,
+    U+2000-206f, U+2074, U+20ac, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Space Mono Bold"), local("SpaceMono-Bold"),
+    url(https://fonts.gstatic.com/s/spacemono/v1/vdpMRWfyjfCvDYTz00NEPGaVI6zN22yiurzcBKxPjFE.woff2)
+      format("woff2");
+  unicode-range: U+0000-00ff, U+0131, U+0152-0153, U+02c6, U+02da, U+02dc,
+    U+2000-206f, U+2074, U+20ac, U+2212, U+2215;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #000099;
+}
+
+h1 {
+  color: white;
+  font-size: 35px;
+  font-family: Georgia;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 2.5;
+  font-family: Georgia;
+  word-spacing: 0.05em;
+  letter-spacing: 0.02em;
+}
+
+h5 {
+  color: #000099;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 2.5;
+  font-family: Papyrus;
+  word-spacing: 0.05em;
+  letter-spacing: 0.02em;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 16px 0;
+  font-family: Helvetica;
+}
+
+strong {
+  font-weight: bold;
+}
+
+#serif, /* Offset linked sections to account for header. */
+#sans,
+#mono {
+  padding-top: 77px;
+  margin-top: -77px;
+}
+
+#pjokes,
+#pjokes2 {
+  padding-top: 77px;
+  margin-top: -77px;
+}
+
+/* Header */
+
+.header {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-weight: 900;
+}
+
+.header li {
+  display: inline-block;
+}
+
+.header a {
+  display: block;
+  color: #4a4a4a;
+  padding: 10px 20px;
+}
+
+a.home {
+  color: #4d00ff;
+}
+
+/* Banner Section */
+
+.banner {
+  background-color: #4d00ff;
+  padding: 100px 0;
+  margin-top: 77px;
+  text-align: center;
+}
+
+
+
+.banner p {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1.4;
+  font-family: "Glegoo";
+  font-size: 20px;
+}
+
+/* Editorial Sections */
+
+.banner2 {
+  background-color: #003399;
+  padding: 100px 0;
+  margin-top: 77px;
+  text-align: center;
+}
+
+.banner3 {
+  background-color: #6600cc;
+  padding: 100px 0;
+  margin-top: 77px;
+  text-align: center;
+}
+
+.banner4 {
+  background-color: #003399;
+  padding: 100px 0;
+  margin-top: 77px;
+  text-align: center;
+}
+
+.banner5 {
+  background-color: #000000;
+  text-color: #000099;
+  padding: 100px 0;
+  margin-top: 77px;
+  text-align: center;
+}
+
+.editorial {
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  color: #4c4c4c;
+}
+
+/* Font Card Sections */
+
+.font-card {
+  background-color: #ffffff;
+  margin: 50px 0;
+  padding: 20px 50px;
+}
+
+.font-card .creator {
+  font-size: 20px;
+  line-height: 1.25;
+  font-style: italic;
+}
+
+.sample {
+  display: inline-block;
+  padding: 0 20px;
+  margin: 20px;
+}
+
+.sample h2 {
+  line-height: 1.5;
+}
+
+.sample .text {
+  color: #4d00ff;
+  font-size: 100px;
+}
+
+/* Add styles for the Garamond font here */
+
+.garamond .sample .text {
+  font-family: Garamond, serif;
+}
+
+/* Add styles for the Helvetica font here */
+
+.helvetica .sample .text {
+  font-family: Helvetica, sans-serif;
+}
+
+/* Add styles for the Space Mono font here */
+
+.space .sample .text {
+  font-family: "Space Mono", monospace;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.regular {
+  font-weight: normal;
+}
+
+.italic {
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 535px) {
+  .header {
+    font-size: 14px;
+  }
+
+  .header a {
+    padding: 30px 20px;
+  }
+
+  a.home {
+    display: none;
+  }
+}
+
+    </style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="yes" >
+
+  <html>
+
+<head>
+onload="checkCookie()"
+  <marquee><title>Programmer Humour</title></marquee>
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <nav class="header">
+    <ul>
+      <li><a class="home" href="#top">Computer Jokes</a></li>
+      <li><a class="pagelink" href="#serif"></a></li>
+      <li><a class="pagelink" href="#pjokes0">Part 1</a></li>
+      <li><a class="pagelink" href="#pjokes1">Part 2</a></li>
+      <li><a class="pagelink" href="#pjokes2">Part 3</a></li>
+      <li><a class="pagelink" href="#ssites">Similar Sites</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner Section -->
+  <div class="banner">
+    <marquee><h1>Computer Jokes</h1></marquee>
+ <h2 onclick="setTimeout(this.innerHTML='*Click!', 5000)">Programmed by Shamus.</h2>
+
+<script>
+function myFunction() {
+    alert('Hello');
+}
+</script>
+    	
+    <p>Why do programmers always mix up Halloween and Christmas? Because Oct 31 equals Dec 25. Have you heard about the new Cray super computer? It’s so fast, it executes an infinite loop in 6 seconds.</p>
+<img src=”http://www.devtopics.com/wp-content/uploads/2008/05/comic.jpg'style='Filter: Wave(Add=0, Freq=5, LightStrength=20, Phase=220, Strength=10)”>
+  </div>
+     <div id="pjokes0">
+       <div class="banner2">
+         <h2>Part 1</h2>
+  <h3>CIA: Computer Industry Acronyms</h3>
+      <ul>
+        <li>CD-ROM: Consumer Device, Rendered Obsolete in Months</li>
+        <li>PCMCIA: People Can’t Memorize Computer Industry Acronyms</li>
+        <li>ISDN: It Still Does Nothing</li>
+        <li>DOS: Defunct Operating System</li>
+        <li>WINDOWS: Will Install Needless Data On Whole System</li>
+        <li>IBM: I Blame Microsoft</li>
+        <li>MICROSOFT: Most Intelligent Customers Realize Our Software Only Fools Teenagers</li>
+  
+    </div>
+       <div style="background-color:#D94A38;width:170px;height:43px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:center;text-align:center;" onclick="clickMeEvent(this)">Click Me</div>
+<script type="application/javascript">
+function clickMeEvent(obj) {
+  if (obj.innerHTML == "Click Me") {
+    obj.innerHTML = "Click Me<br>Click Me Again";
+    return;
+  }
+  if (obj.innerHTML == "Click Me<br>Click Me Again") {
+    obj.innerHTML = "Thank You";  
+    return; 
+  }
+  if (obj.innerHTML == "Thank You") {
+  obj.innerHTML = "Goodbye";  
+    return; 
+  }
+  if (obj.innerHTML == "Goodbye") {
+    obj.style.display = "none";
+    return;
+  }
+}
+</script>
+</div> 
+                    <div id="pjokes1">
+                    <div class="banner3">
+          <h2>Part 2</h2>
+          <ul>
+            <li>Definition, Programmer: An organism that turns caffeine and pizza into software.</li>
+            <li>Definition, Algorithm: Word used by programmers when they do not want to explain what they did.</li>
+            <li>"I’d like to make the world a better place. But they won’t give me the source code…”</li>
+            <li>There are 10 types of people in the world; Those who know Trinary, Those who don't,  And those who mistake it for Binary.</li>
+          </ul>
+<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Turn off the light</button>
+
+        </div>
+ <div class="banner4">
+  <div id="pjokes2">
+       <h2>Part 3</h2>
+      <ul> 
+      <li>Q: What's the Object Oriented way to become wealthy</li> 
+      <li>A: Inheritance</li> 
+     <li>Q: Why did the Programmer Quit his job?</li> 
+      <li>A: He Didn't get Arrays!</li>
+      </ul>
+        </div>
+
+  <div class="banner5">
+  <div id="ssites">
+       <h5>Similar Sites</h5>
+    <ul> 
+      <li><a href="http://devhumor.com/">Developer Humor</a></li>
+      <li><a href="http://www.devtopics.com/best-programming-jokes/">Programming Jokes</a></li> 
+      <li><a href="https://unijokes.com/programmer-jokes/">Programmer Jokes</a></li> 
+    </ul>
+    
+        </div>
+</body>
+
+</html>
+  
+  
+  
+
+  
+
+
+
+  
+  
+
+</body>
+
+</html>
+ 
+</html>
+
+ 
